@@ -1,0 +1,177 @@
+During our project, we had several feedback session. The first one took place before we handed in the proposal
+when we showed our mockup to several people in Kistan 2.0. 
+Then there was a user feedback after the mid project review.
+And lastly, before submitting finally, everyone let their family etc. try out the almost final version. 
+In this file, there is one of the family member walkthroughs as a monologue, as well as the feedback we got during mid review. 
+
+
+Walk through of almost finished version (commit: f0eeeb7): 
+
+Ah, there is a login with mail / password ... and google (does google sign up)
+Something with music - can you listen to songs? Ah, nvmd. Something with lyrics... 
+Did people post comments on lyrics? (Clicks on a songs - nothing happens - clicks on see more - song view opens)
+Cool, there are all the lyrics now! And then ... (hovers over comment) ... one can see where it relates to. 
+
+*Tries to select lines* - does not work well - they have to be adjacent!
+*Tries spotify embed* - really nice! 
+
+How do I go back? - Clicks on feed. - ok
+
+*Opens artists view* and clicks on the element - is it not clickable? 
+-> clicks on song - redirect to song view. 
+
+And one can search? Types "Coldplay" - Is a song always needed? Presses enter
+Nope 
+Clicks on song - the song loads - clicks on a different one 
+-> First song opens and is immediately replaced by second click... 
+
+Goes back to the feed after - tries to click on the lyrics again - nothing happens - see more
+Then writes a comment, and likes another one.
+
+Signs out. 
+
+
+
+Feedback on the version after cleanup (commit: e32fb7a)
+
+
+Sidebar:
+
+No spacings between the elements
+Underlined links look weird
+Why are there bullet list elements? 
+
+Everything should be aligned left (also the 1 / 2 / 3)
+Feed, Artists, Songs is kinda the same hierarchichally - but not visually 
+
+It would be very cool to be able to click on the logo to go to the homepage
+Why is Personal not doing anything? Welcome... is a bit random 
+"Where is the CSS file? - It looks a bit like the CSS file is lost" 
+
+After changes: 
+The alignment is a bit weird - the numberings should go into the same line as the icons
+Signout is floating weirdly. 
+Mint as interaction color - Why are the numbers minted? But not the icons? 
+
+
+Feed:
+
+Searching after Artists aaaand a title is super annoying...
+The layout looks like a mobile website - but is a desktop app. 
+(Searches on X for reference - could work etc.)
+
+The loading icon looks very weird, blue and too big...
+
+The Artist / Song View looks pretty much like nothing...
+
+After changes: 
+
+Better layout - but text should be clickable
+Maybe show a few comments (with options for more).
+If you like, the heart jumps to the side. 
+Sort after date instead of random order.
+
+
+
+SongsView:
+
+Selection is abit weird, but it makes sense for the use case.
+The grey background looks unfitting. Make it lighter or leave it out.
+
+It is unclear, how the comments interact with the lyrics. No one clicks on comments right away. 
+-> Hovering would be nice with a different opacity. Maybe then a click selects the line. 
+Answering comments would be cool... 
+
+After changes: 
+Spotify is a banger - the container could be a bit larger
+Cutting of comments - why does the container not go to the bottom line
+Artist should be a lot smaller / not bold.
+
+
+ArtistView: 
+
+Why are the containers so long, even though they are not filled. 
+There is space for one more. 
+
+
+General: 
+
+When you make the window very small, the logo overflows. - Mobile version could catch that
+
+
+Mobile:
+
+Space after icons could be nice... 
+
+
+General feedback (commit: f0eeeb7)
+
+Things I liked:
+
+Nice UI in general
+The colors schemes is good
+The size of the the feed and the sidebar is good
+The animations in the sidebar are a nice touch
+It’s nice that when you click on the musicBook text you are redirected to the feed again.
+it’s nice that the app works equally as great on the phone
+The lyrics section when using the app in the mobile version is very good, I liked that you only scroll in the lyrics and not the whole page. And also that the text is marked grey with blue text so you can see that it’s clickable.
+
+
+Small things to improve:
+
+If you scroll down in the feed and then click on the feed button in the sidebar nothing happens, instead of nothing happening it would be nice if we are redirected to the top of the feed again.
+When you comment on a line it would be nice to just press enter to post the comment.
+Most apps have a small logo in the browser tab(favicon), that could perhaps be added.
+
+
+Features that would be fun:
+
+Have friends, be able to add your friends and see what they have commented on. And then be able to filter the feed between general feed and a feed with only your friends posts.
+In the artist view it would be fun to click on a artis and get to a sort of info page on that artist with some fun info about the artist. Use some sort of wikipedia API.
+In the search function it would be fun to just say a genre and then get different songs in that genre without entering an artist or song.
+
+
+Things that need to change:
+
+hover effect for clear selection button
+hover effect for delete comment button
+move the logout button a little up in sidebar mobile view
+little gap between icons and text in sidebar mobile view
+cap selection size at a reasonable number of lines
+change cursor to pointer when hovering over lines in song view to indicate interactivity
+reset selection when going to another song view
+if the selection is not visible (due to overflowing) after clicking on a comment, make the page scroll down
+in the feed, show the picture of the song instead of the artist?
+order feed elements somehow by date? most recent first etc.
+suspense for loading feed
+
+
+General feedback (commit: e247fb4)
+
+Strengths:
+
+Clean and User-Friendly Design: The interface is visually appealing, with clear sections and intuitive navigation, making it easy for users to interact with the app.
+
+Trending Songs Feature: The dedicated trending section is a strong addition, keeping users engaged by showing the most popular tracks.
+
+Search Functionality: Searching for songs and artists is fast and straightforward, enhancing the user experience.
+
+Consistent Branding: The MusicBook branding is well-executed, providing a polished and professional look to the app.
+
+Lyric Highlighting: The way comments can relate to specific lyrics is an engaging and useful feature, enhancing interaction with song content.
+
+Clickable: when clicking on the feed, artists, search and the top rankings, the mouse turns into a pointer and the text turns into a different colour making the user understand it is clickable.
+
+
+Areas for Improvement:
+
+Loading Performance: Pages take some time to load, which affects usability. Optimizing load times would make transitions smoother and improve the overall experience.
+
+Mobile View Adjustments: Some elements in the mobile view feel misaligned, such as spacing between icons and text in the sidebar. Improving this would make the app feel more responsive on smaller screens.
+
+Sign-Up Experience: Currently, users cannot view their password while signing up. Adding an option to toggle password visibility or requiring users to confirm their password would reduce potential errors.
+
+Enter Key Functionality: When signing in or searching for songs/artists, pressing Enter does not trigger an action. Adding this functionality would align with user expectations and improve usability.
+
+Sidebar Improvements: Adjustments like aligning the numbers and icons in the sidebar and repositioning the logout button in mobile view would enhance the app's design consistency.
+
